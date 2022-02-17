@@ -29,7 +29,7 @@ if len(jsonResponse) > 0:
         machine = jsonResponse[i]['title']
         target = jsonResponse[i]['listingCodename']
         amount = jsonResponse[i]['payout']['amount']
-        message= "The machine name "+machine+" on the target "+target+" with the worth of ",amount," USD has been waiting for approval"
+        message= "The machine name "+machine+" on the target "+target+" with the worth of "+str(amount)" USD has been waiting for approval"
         telegram_notify (message)
 else:
     telegram_notify ("No Missions are present at the moment")
