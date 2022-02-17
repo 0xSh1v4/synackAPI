@@ -14,6 +14,7 @@ This is a library and set of scripts that make SRT life a little easier when int
   * Target types
 * Enable mission-claiming bots
 * Manage notifications
+* Send Notification via Telegram
 
 # Acknowledgements
 Thank you Malcolm, Nicolas, and pmnh for making this better!
@@ -35,6 +36,8 @@ email = your.email@domain.tld
 password = your.synack.password
 authy_secret = ABCDEFGHIJKLMNOPQRSTUVWXYZ======
 webhook_url = https://hooks.slack.com/services/...
+telegram_token = yourTelegramBotToken
+telegram_chat_id = yourTelegramChatId
 ```
 * login_wait
   * Number of seconds to wait for the platform's website to be loaded before attempting to log in. Can take a while.
@@ -54,6 +57,8 @@ webhook_url = https://hooks.slack.com/services/...
 * proxyport (default 8080) - local proxy port used for debugging
 * session_token_path (default /tmp/synacktoken) - location to store synack token
 * notification_token_path (default /tmp/notificationtoken) - location to store notification token
+* telegram_token - Create a new bot for telegram and enter that bot token here.
+* telegram_chat_id - Your Telegram Chat ID (Not the bot chat id)
 
 ## requirements.txt
 Your best bet to have all required python3 modules is to run `pip3 install -r requirements.txt`. I cannot help troubleshoot any other modules.
