@@ -3,6 +3,11 @@ from synack import synack
 import telegram
 import json
 
+s1 = synack()
+s1.gecko = False
+s1.getSessionToken()
+
+
 def telegram_notify(message):
     """AI is creating summary for telegram_notify
 
@@ -15,9 +20,7 @@ def telegram_notify(message):
     notify.sendMessage(chat_id=chat_id, text=message)
 
 
-s1 = synack()
-s1.gecko = False
-s1.getSessionToken()
+
 #s1.getAllTargets()
 response = s1.try_requests("GET", "https://platform.synack.com/api/tasks/v2/tasks?perPage=20&viewed=true&page=1&status=FOR_REVIEW&includeAssignedBySynackUser=true", 10)
 jsonResponse=response.json()
