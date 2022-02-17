@@ -59,6 +59,8 @@ class synack:
         self.connector = False
         self.webdriver = None
         self.headless = False
+        self.telegramToken = self.config['DEFAULT']['telegram_token']
+        self.telegramChatId = self.config['DEFAULT']['telegram_chat_id']
         # set to false to use the requests-based login
         self.gecko = self.config['DEFAULT'].getboolean('gecko',True)
         self.proxyport = self.config['DEFAULT'].getint('proxyport',8080)
