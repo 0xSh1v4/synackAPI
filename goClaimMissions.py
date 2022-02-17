@@ -65,7 +65,7 @@ def telegram_notify():
             machine = jsonResponse[i]['title']
             target = jsonResponse[i]['listingCodename']
             amount = jsonResponse[i]['payout']['amount']
-            notify_str = "The machine name "+machine+" on the target "+target+" with the worth of ",amount," USD has been claimed successfully"
+            notify_str = "The machine name "+machine+" on the target "+target+" with the worth of "+str(amount)+" USD has been claimed successfully"
             notify.sendMessage(chat_id=chat_id, text=notify_str)
     else:
 
